@@ -1,0 +1,41 @@
+/* Header.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #0e0e11; /* Cor de fundo escura */
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 8px;
+    color: #ffffff; /* Cor do texto */
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .access {
+    background-color: #444444; /* Cor de fundo do botão "Acessar" */
+    color: #ffffff;
+  }
+  
+  .create-account {
+    background-color: #3064f5; /* Cor de fundo do botão "Criar minha conta" */
+    color: #ffffff;
+    box-shadow: 0px 0px 20px 10px rgba(48, 100, 245, 0.5); /* Sombra no botão */
+  }
+  
