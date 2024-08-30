@@ -17,7 +17,7 @@ const Main = () => {
         />
         <button className="buy-button">COMPRAR</button>
       </div>
-      <img src="/dashboard.png" alt="dashboard" width={980} height={340} />
+      <img src="/dashboard.png" alt="dashboard" width={980} height={340}/>
       <button className="start-button">COMEÇAR</button>
     </div>
   );
