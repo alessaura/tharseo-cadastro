@@ -1,114 +1,203 @@
-.asset-container {
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  .asset-container {
+    width: 100%;
+    min-height: 100vh;
     text-align: center;
     padding: 20px;
     background-color: #000511;
-    min-height: 100vh; /* Faz com que o contêiner ocupe toda a altura da tela */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.asset-container h1 {
+  }
+  
+  .asset-container h1 {
     font-size: 2.5rem;
     font-weight: bold;
     color: #fff;
-}
-
-.asset-container p {
+  }
+  
+  .asset-container p {
     font-size: 1rem;
     margin: 10px 0 20px;
     color: #ccc;
-}
-
-.input-container {
+  }
+  
+  .input-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #242D42;
+    background-color: #242d42;
     padding: 10px 20px;
     border-radius: 20px;
-    width: 80%; /* Largura responsiva */
-    max-width: 1080px; /* Limite máximo para largura */
+    width: 80%;
+    max-width: 1080px;
     box-shadow: 0 0 30px rgba(0, 0, 255, 0.5);
-    margin-bottom: 20px; /* Espaçamento de 20px entre o input e a imagem */
-}
-
-.input-container input {
+    margin-bottom: 20px;
+  }
+  
+  .input-container input {
     flex: 1;
     border: none;
-    background-color: #242D42;
+    background-color: #242d42;
     padding: 15px;
     font-size: 1rem;
     outline: none;
     color: #fff;
-}
-
-.input-container .buy-button {
+  }
+  
+  .img {
+    width: 100%;
+    max-width: 980px;
+    height: auto;
+    margin-top: 20px;
+    filter: brightness(1.2);
+    transition: filter 0.3s ease;
+  }
+  
+  .img:hover {
+    filter: brightness(1.5);
+  }
+  
+  .container-2, .container-3 {
+    width: 100%;
+    min-height: 50vh;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000511;
+  }
+  
+  .container-2 {
+    background-color: #001;
+  }
+  
+  .container-2 .freedom-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .container-2 .description, .container-3 .description {
+    font-size: 1rem;
+    margin: 10px 0 20px;
+    color: #ccc;
+    width: 80%;
+    max-width: 980px;
+  }
+  
+  .container-2 img {
+    width: 100%;
+    max-width: 773px;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  .container-3 h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+  }
+  
+  /* Estilos dos botões */
+  .cta-button, .buy-button, .start-button {
     background-color: #2d72d9;
     border: none;
     color: #fff;
     padding: 10px 20px;
-    border-radius: 10px; /* Menor arredondamento para seguir o estilo retangular */
-    margin-left: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.input-container .buy-button:hover {
-    background-color: #1c54a4;
-}
-
-.start-button {
-    margin-top: 20px;
-    padding: 10px 30px;
-    border-radius: 30px;
-    background-color: #2d72d9;
-    border: none;
-    color: #fff;
-    font-size: 1rem;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.start-button:hover {
+  }
+  
+  .cta-button:hover, .buy-button:hover, .start-button:hover {
     background-color: #1c54a4;
     box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
-}
-
-.img {
-    width: 100%; /* Tornando a imagem responsiva */
-    max-width: 980px; /* Limite máximo de largura */
-    height: auto; /* Mantendo a proporção da imagem */
-    margin-top: 20px; /* Espaçamento de 20px entre o botão Comprar e a imagem */
-    filter: brightness(1.2); /* Aumenta a luminosidade da imagem */
-    transition: filter 0.3s ease; /* Transição suave ao passar o mouse */
-}
-
-.img:hover {
-    filter: brightness(1.5); /* Aumenta ainda mais a luminosidade ao passar o mouse */
-}
-
-
-/* Media query para telas menores */
-@media (max-width: 768px) {
-    .input-container {
-        width: 90%; /* Mais largura em telas menores */
+  }
+  
+  @media (max-width: 768px) {
+    .asset-container h1, .container-3 h2, .container-2 .freedom-text {
+      font-size: 1.5rem;
     }
-
-    .asset-container h1 {
-        font-size: 2rem; /* Tamanho do texto menor em telas menores */
-    }
-
+  
     .input-container input {
-        padding: 10px; /* Menor padding para adaptar ao mobile */
+      padding: 8px;
     }
+  
+    .buy-button, .cta-button {
+      padding: 6px 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .asset-container h1, .container-3 h2, .container-2 .freedom-text {
+      font-size: 1.2rem;
+    }
+  
+    .input-container input {
+      padding: 6px;
+    }
+  
+    .buy-button, .cta-button {
+      padding: 4px 10px;
+    }
+  }
 
-    .input-container .buy-button {
-        padding: 8px 15px; /* Menor padding no botão em telas menores */
-    }
-
-    .img {
-        width: 100%; /* Garantindo que a imagem ocupe a largura disponível */
-    }
-}
+  .app {
+    background-color: #001;
+    display: flex;
+    justify-content: center; /* Alinha os cards horizontalmente no centro */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os cards fiquem em várias linhas se necessário */
+    gap: 20px; /* Espaçamento entre os cards */
+  }
+  
+  .card {
+    background-color: #202020;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    flex: 1; /* Faz com que cada card tenha o mesmo tamanho */
+    min-width: 250px; /* Define o tamanho mínimo de cada card */
+    max-width: 300px; /* Define o tamanho máximo de cada card */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-icon {
+    font-size: 40px;
+    color: #4a90e2;
+    margin-bottom: 10px;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  
+  
